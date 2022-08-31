@@ -3,6 +3,6 @@ public class Main {
         long[] sls = {700, 400, 11, 1000, 1200};
         SalesManager sM = new SalesManager(sls);
 
-        System.out.println(sM.max(5));
+        System.out.println(sM.max(sls.length));
     }
 }
