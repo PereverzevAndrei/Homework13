@@ -5,5 +5,6 @@ public class Main {
         SalesManager sM = new SalesManager(sls);
         SalesManager.AverageSale(sls);
 
+
     }
 }
