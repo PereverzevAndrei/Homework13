@@ -1,18 +1,37 @@
 public class SalesManager {
-    protected long[] sales;
+    protected static int[] sales;
 
-    public SalesManager(long[] sales) {
+        public SalesManager(int[] sales) {
         this.sales = sales;
     }
 
-    public long max(int i) {
-        long max = -1;
-        for (long sale : sales) {
+    public static int max() {
+        int max = -1;
+        for (int sale : sales) {
             if (sale > max) {
                 max = sale;
             }
         }
         return max;
+    }
+
+    public static int min() {
+        int min = max();
+        for (int sale : sales) {
+            if (sale < min) {
+                min = sale;
+            }
+        }
+        return min;
+    }
+
+    public static int AverageSale(int[] sales) {
+        int salesSumm = 0;
+        for (int sale : sales) {
+            salesSumm += sale;
+        }
+        System.out.println("Усредненная продажа: " + (salesSumm - min() - max()) / (sales.length - 2));
+        return salesSumm;
     }
 }
 
